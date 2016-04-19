@@ -1,7 +1,8 @@
 package com.adricom.remembrall.app.activities;
 
-import android.app.Activity;
+import android.app.ActionBar;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
@@ -23,7 +24,7 @@ import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-public class GroupsActivity extends Activity {
+public class GroupsActivity extends AppCompatActivity {
 
     private SortedMap<GroupsGroup, List<GroupsItem>> items;
     private ExpandableListView expListView;
@@ -35,6 +36,11 @@ public class GroupsActivity extends Activity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.groups_toolbar);
         setActionBar(toolbar);
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setLogo(android.R.drawable.ic_menu_sort_by_size);
+        }
 
         expListView = (ExpandableListView) findViewById(R.id.groups_exp_list_view);
         if (!GroupsHelper.IsInitialized()) {

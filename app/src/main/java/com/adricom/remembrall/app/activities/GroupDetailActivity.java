@@ -1,5 +1,6 @@
 package com.adricom.remembrall.app.activities;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -86,6 +87,11 @@ public class GroupDetailActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.group_toolbar);
         setActionBar(toolbar);
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setLogo(android.R.drawable.ic_menu_view);
+        }
 
         if (!GroupsHelper.IsInitialized()) {
             GroupsHelper.Init(this);

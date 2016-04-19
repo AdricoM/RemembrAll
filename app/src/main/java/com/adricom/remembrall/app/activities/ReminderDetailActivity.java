@@ -1,6 +1,6 @@
 package com.adricom.remembrall.app.activities;
 
-import android.app.Activity;
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -33,7 +34,7 @@ import com.adricom.remembrall.app.services.AutoStartService;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class ReminderDetailActivity extends Activity {
+public class ReminderDetailActivity extends AppCompatActivity {
 
     private static final int DEFAULT_HOUR = 10;
     private static final int DEFAULT_MINUTE = 0;
@@ -75,6 +76,11 @@ public class ReminderDetailActivity extends Activity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.reminder_toolbar);
         setActionBar(toolbar);
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setLogo(android.R.drawable.ic_menu_view);
+        }
 
         if (!RemindersHelper.IsInitialized()) {
             RemindersHelper.Init(this);

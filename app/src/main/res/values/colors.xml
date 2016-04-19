@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="ToolbarFront">#FFFFFF</color>
     <color name="ToolbarBack">#555555</color>
 
     <color name="MainBack">#6F84FF</color>

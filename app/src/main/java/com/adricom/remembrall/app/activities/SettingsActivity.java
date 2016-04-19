@@ -1,8 +1,9 @@
 package com.adricom.remembrall.app.activities;
 
-import android.app.Activity;
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.Toolbar;
 
@@ -14,7 +15,7 @@ import com.adricom.remembrall.app.models.SettingsItem;
 
 import java.util.List;
 
-public class SettingsActivity extends Activity {
+public class SettingsActivity extends AppCompatActivity {
 
     private List<SettingsItem> items;
     private CoordinatorLayout coordinatorLayout;
@@ -28,6 +29,11 @@ public class SettingsActivity extends Activity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.setting_toolbar);
         setActionBar(toolbar);
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setLogo(android.R.drawable.ic_menu_preferences);
+        }
 
         if (!SettingsHelper.IsInitialized())
             SettingsHelper.Init(this);

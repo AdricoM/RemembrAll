@@ -16,10 +16,8 @@
             android:id="@+id/setting_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/ToolbarBack"
-            android:logo="@android:drawable/ic_menu_preferences"
             android:popupTheme="@android:style/ThemeOverlay.Material.Light"
-            android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+            android:theme="@style/ToolbarTheme">
         </Toolbar>
 
         <ListView

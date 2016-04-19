@@ -28,7 +28,7 @@
 
     <!-- About -->
     <string name="about_contact">Contact</string>
-    <string name="about_mail" translatable="false">adricom@protonmail.ch</string>
+    <string name="about_mail" translatable="false">myadridev@gmail.com</string>
     <string name="about_mail_client_choice_label">Send mail with</string>
     <string name="about_mail_uri" translatable="false">mailto:</string>
     <string name="about_version">Version</string>

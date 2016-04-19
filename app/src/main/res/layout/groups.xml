@@ -9,10 +9,8 @@
         android:id="@+id/groups_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/ToolbarBack"
-        android:logo="@android:drawable/ic_menu_sort_by_size"
         android:popupTheme="@android:style/ThemeOverlay.Material.Light"
-        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        android:theme="@style/ToolbarTheme">
     </Toolbar>
 
     <ExpandableListView

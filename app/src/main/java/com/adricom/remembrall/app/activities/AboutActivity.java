@@ -1,9 +1,10 @@
 package com.adricom.remembrall.app.activities;
 
-import android.app.Activity;
+import android.app.ActionBar;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.Toolbar;
 
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class AboutActivity extends Activity {
+public class AboutActivity extends AppCompatActivity {
 
     private String version;
     private String contactSubject;
@@ -28,6 +29,11 @@ public class AboutActivity extends Activity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.about_toolbar);
         setActionBar(toolbar);
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setLogo(android.R.drawable.ic_menu_info_details);
+        }
 
         ListView listView = (ListView) findViewById(R.id.about_list_view);
 

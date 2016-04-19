@@ -1,0 +1,27 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:padding="6dip"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/about_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="About"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+    <TextView
+            android:id="@+id/about_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valeur"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+</LinearLayout>

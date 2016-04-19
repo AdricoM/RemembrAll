@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ToolbarBack">#555555</color>
+
+    <color name="MainBack">#6F84FF</color>
+    <color name="MainFront">#FFFFFF</color>
+
+    <color name="GroupBackGround">@color/MainBack</color>
+    <color name="GroupForeground">@color/MainFront</color>
+
+    <color name="ErrorBack">#F7A10C</color>
+    <color name="ErrorFront">#FFFFFF</color>
+
+    <color name="NotificationBack">#F7A10C</color>
+</resources>

@@ -1,0 +1,256 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/reminder_coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ReminderDetailActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:id="@+id/reminder_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ToolbarBack"
+            android:logo="@android:drawable/ic_menu_view"
+            android:popupTheme="@android:style/ThemeOverlay.Material.Light"
+            android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        </Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/reminder_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- name -->
+                <LinearLayout
+                    android:id="@+id/reminder_name_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/reminder_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/reminder_name"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/reminder_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:text="Toto"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/reminder_name_value_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:text="Toto avec un super long titre pour faire plusieurs lignes"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <!-- description -->
+                <LinearLayout
+                    android:id="@+id/reminder_description_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/reminder_name_linear"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/reminder_description_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/reminder_description"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/reminder_description_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:text="Toto"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/reminder_description_value_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:hint="@string/global_optional"
+                        android:text="Toto avec un super long titre pour faire plusieurs lignes"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <!-- reminder date -->
+                <LinearLayout
+                    android:id="@+id/reminder_custom_date_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/reminder_description_linear"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/reminder_date_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="@string/reminder_date"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/reminder_date_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0"
+                        android:text="Toto"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <DatePicker
+                    android:id="@+id/reminder_date_value_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reminder_custom_date_linear"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"/>
+
+                <!-- use custom reminder time -->
+                <LinearLayout
+                    android:id="@+id/reminder_use_custom_reminder_time_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/reminder_date_value_edit"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/reminder_use_custom_reminder_time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/reminder_use_custom_reminder_time"
+                        android:textSize="18sp"/>
+
+                    <CheckBox
+                        android:id="@+id/reminder_use_custom_reminder_time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0"/>
+
+                </LinearLayout>
+
+                <!-- custom reminder time -->
+                <LinearLayout
+                    android:id="@+id/reminder_custom_time_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/reminder_use_custom_reminder_time_linear"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/reminder_custom_time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="@string/reminder_time"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/reminder_custom_time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0"
+                        android:text="Toto"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <TimePicker
+                    android:id="@+id/reminder_custom_time_value_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/reminder_date_value_edit"
+                    android:layout_alignRight="@id/reminder_date_value_edit"
+                    android:layout_below="@id/reminder_custom_time_linear"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

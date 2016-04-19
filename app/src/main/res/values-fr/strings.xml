@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Titles -->
+    <string name="app_name">Rappel\'Tout !</string>
+    <string name="title_about">A propos</string>
+    <string name="title_settings">Paramètres</string>
+    <string name="title_groups">Groupes</string>
+    <string name="title_group_edit">Modifier le groupe</string>
+    <string name="title_group_add">Ajouter un nouveau groupe</string>
+
+    <!-- Global -->
+    <string name="global_yes">Oui</string>
+    <string name="global_no">Non</string>
+    <string name="global_ok">Ok</string>
+    <string name="global_cancel">Annuler</string>
+
+    <!-- Menu -->
+    <string name="menu_main_about">A propos</string>
+    <string name="menu_main_settings">Paramètres</string>
+    <string name="menu_groups_add">Ajouter un groupe</string>
+    <string name="menu_group_save">Enregistrer les modifications</string>
+
+    <!-- About -->
+    <string name="about_contact">Contact</string>
+    <string name="about_mail_client_choice_label">Envoyer un mail avec</string>
+    <string name="about_version">Version</string>
+    <string name="about_version_prefix">v</string>
+
+    <!-- Settings -->
+    <string name="settings_use_default_reminder_time">Utiliser une heure par défaut pour tous les rappels</string>
+    <string name="settings_use_default_reminder_time_title">Utiliser une heure par défaut pour tous les rappels</string>
+    <string name="settings_default_reminder_time">Heure par défaut des rappels</string>
+    <string name="settings_timepicker_title">Choisissez l\'heure</string>
+    <string name="settings_file_error">Erreur interne, réessayez !</string>
+    <string name="settings_number_reminders_home">Nombre de rappels sur la page d\'accueil</string>
+    <string name="settings_number_reminders_home_title">Nombre de rappels sur la page d\'accueil</string>
+
+    <!-- Utils -->
+    <string name="utils_time_format">HH:mm</string>
+    <string name="utils_date_format">E dd/MM/yyyy</string>
+
+    <!-- Main -->
+    <string name="main_group_quick_access">Accès rapide</string>
+    <string name="main_group_next_coming_reminders">Prochains rappels</string>
+
+    <!-- Groups -->
+    <string name="groups_no_group">Aucun groupe pour l\'instant</string>
+    <string name="menu_group_edit">Modifier le groupe</string>
+    <string name="title_group_detail">Détails du groupe</string>
+    <string name="group_name">Nom du groupe </string>
+    <string name="menu_group_cancel">Annuler les modifications</string>
+    <string name="menu_group_delete">Supprimer le groupe</string>
+    <string name="global_confirmation_title">Confirmation</string>
+    <string name="group_delete_confirmation">Voulez-vous supprimer le groupe ?</string>
+    <string name="menu_group_quick_access_off">Ajouter à l\'accès rapide</string>
+    <string name="menu_group_quick_access_on">Retirer de l\'accès rapide</string>
+    <string name="main_see_all_groups">Voir tous les groupes...</string>
+    <string name="groups_add_reminder">Ajouter un rappel...</string>
+    <string name="group_use_default_reminder_time">Utiliser une heure par défaut pour les rappels du groupe</string>
+    <string name="group_default_reminder_time">Heure par défaut des rappels</string>
+    <string name="reminder_delete_confirmation">Voulez-vous supprimer le rappel ?</string>
+    <string name="title_reminder_detail">Détails du rappel</string>
+    <string name="menu_reminder_save">Enregistrer les modifications</string>
+    <string name="menu_reminder_cancel">Annuler les modifications</string>
+    <string name="menu_reminder_delete">Supprimer le rappel</string>
+    <string name="menu_reminder_edit">Modifier le rappel</string>
+    <string name="reminder_name">Nom du rappel</string>
+    <string name="reminder_time">Heure du rappel</string>
+    <string name="reminder_use_custom_reminder_time">Utiliser une heure spécifique pour ce rappel</string>
+    <string name="reminder_date">Date du rappel</string>
+    <string name="group_reminders_list">Rappels</string>
+    <string name="global_optional">Facultatif</string>
+    <string name="group_description">Description</string>
+    <string name="reminder_description">Description</string>
+    <string name="group_error_no_name">Pas de nom défini pour ce groupe</string>
+    <string name="group_error_existing_name">Un autre groupe a le même nom</string>
+    <string name="reminder_error_no_name">Pas de nom défini pour ce rappel</string>
+    <string name="reminder_error_existing_name">Un autre rappel a le même nom</string>
+    <string name="reminder_error_no_reminder_time">Pas d\'horaire défini pour ce rappel</string>
+    <string name="group_error_no_reminder_time">Un rappel de ce groupe n\'a pas d\'horaire défini</string>
+    <string name="settings_error_no_reminder_time">Un rappel n\'a pas d\'horaire défini</string>
+    <string name="utils_date_format_full">dd/MM/yyyy HH:mm</string>
+</resources>

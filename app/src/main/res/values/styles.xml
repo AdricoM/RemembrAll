@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorAccent">@color/MainBack</item>
+        <item name="android:colorControlNormal">@color/MainBack</item>
+        <item name="android:colorControlActivated">@color/MainBack</item>
+        <item name="android:amPmBackgroundColor">@color/MainBack</item>
+        <item name="android:numbersSelectorColor">@color/MainBack</item>
+        <item name="android:colorButtonNormal">@color/MainBack</item>
+        <item name="android:colorPrimaryDark">@color/ToolbarBack</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/MainBack</item>
+        <item name="android:colorControlNormal">@color/MainBack</item>
+        <item name="android:colorControlActivated">@color/MainBack</item>
+        <item name="android:amPmBackgroundColor">@color/MainBack</item>
+        <item name="android:numbersSelectorColor">@color/MainBack</item>
+        <item name="android:colorButtonNormal">@color/MainBack</item>
+    </style>
+</resources>

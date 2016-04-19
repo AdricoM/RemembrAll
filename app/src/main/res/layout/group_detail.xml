@@ -1,0 +1,36 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/group_coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GroupDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:id="@+id/group_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ToolbarBack"
+            android:logo="@android:drawable/ic_menu_view"
+            android:popupTheme="@android:style/ThemeOverlay.Material.Light"
+            android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        </Toolbar>
+
+        <ExpandableListView
+            android:id="@+id/group_reminders_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:groupIndicator="@null"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

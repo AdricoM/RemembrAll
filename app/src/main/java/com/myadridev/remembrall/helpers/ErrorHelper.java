@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 
 /**
  * Created by adrien on 02/04/16.

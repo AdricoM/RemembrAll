@@ -2,7 +2,7 @@ package com.myadridev.remembrall.models;
 
 import android.content.Context;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 
 /**
  * Created by adrien on 29/08/15.

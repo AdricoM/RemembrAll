@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.helpers.NavigationHelper;
 import com.myadridev.remembrall.helpers.RemindersHelper;
 import com.myadridev.remembrall.models.ReminderModel;

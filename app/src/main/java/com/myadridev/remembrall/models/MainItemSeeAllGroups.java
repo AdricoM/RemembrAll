@@ -2,7 +2,7 @@ package com.myadridev.remembrall.models;
 
 import android.content.Context;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.enums.MainItemEnum;
 import com.myadridev.remembrall.helpers.NavigationHelper;
 

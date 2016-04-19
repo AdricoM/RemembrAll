@@ -24,7 +24,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toolbar;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.helpers.ErrorHelper;
 import com.myadridev.remembrall.helpers.RemindersHelper;
 import com.myadridev.remembrall.helpers.SdkHelper;

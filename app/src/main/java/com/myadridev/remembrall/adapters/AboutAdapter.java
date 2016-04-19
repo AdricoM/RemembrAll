@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.models.AboutItem;
 
 import java.util.List;

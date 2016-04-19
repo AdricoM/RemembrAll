@@ -2,7 +2,7 @@ package com.myadridev.remembrall.models;
 
 import android.content.Context;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.enums.SettingsFieldEnum;
 
 import java.text.SimpleDateFormat;

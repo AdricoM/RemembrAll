@@ -9,7 +9,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.models.GroupDetailGroup;
 import com.myadridev.remembrall.models.GroupsItem;
 import com.myadridev.remembrall.models.GroupsItemAddReminder;

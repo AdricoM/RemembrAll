@@ -1,6 +1,6 @@
 package com.myadridev.remembrall.enums;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 
 /**
  * Created by adrien on 10/09/15.

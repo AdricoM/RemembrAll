@@ -3,7 +3,7 @@ package com.myadridev.remembrall.helpers;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.enums.SettingsFieldEnum;
 import com.myadridev.remembrall.models.SettingsItem;
 

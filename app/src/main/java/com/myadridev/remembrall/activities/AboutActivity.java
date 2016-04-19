@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.Toolbar;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.adapters.AboutAdapter;
 import com.myadridev.remembrall.enums.AboutFieldsEnum;
 import com.myadridev.remembrall.models.AboutItem;

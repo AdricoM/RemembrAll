@@ -15,7 +15,7 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.enums.SettingsFieldEnum;
 import com.myadridev.remembrall.helpers.ErrorHelper;
 import com.myadridev.remembrall.helpers.GroupsHelper;

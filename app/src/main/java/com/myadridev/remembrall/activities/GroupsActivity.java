@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.widget.ExpandableListView;
 import android.widget.Toolbar;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.adapters.GroupsAdapter;
 import com.myadridev.remembrall.helpers.GroupsHelper;
 import com.myadridev.remembrall.helpers.NavigationHelper;

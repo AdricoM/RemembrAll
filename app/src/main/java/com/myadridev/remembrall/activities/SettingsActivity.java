@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.Toolbar;
 
-import com.adricom.remembrall.app.R;
+import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.adapters.SettingsAdapter;
 import com.myadridev.remembrall.enums.SettingsFieldEnum;
 import com.myadridev.remembrall.helpers.SettingsHelper;

@@ -1,12 +1,11 @@
 package com.myadridev.remembrall.activities;
 
-import android.app.ActionBar;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
-import android.widget.Toolbar;
 
 import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.adapters.AboutAdapter;
@@ -28,8 +27,8 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.about);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.about_toolbar);
-        setActionBar(toolbar);
-        ActionBar actionBar = getActionBar();
+        setSupportActionBar(toolbar);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayUseLogoEnabled(true);
             actionBar.setLogo(android.R.drawable.ic_menu_info_details);
@@ -57,6 +56,7 @@ public class AboutActivity extends AppCompatActivity {
 
         items.add(new AboutItem(this, AboutFieldsEnum.VERSION, version));
         items.add(new AboutItem(this, AboutFieldsEnum.CONTACT, getString(R.string.about_mail)));
+        items.add(new AboutItem(this, AboutFieldsEnum.SOURCES, getString(R.string.about_sources_url)));
 
         Collections.sort(items);
 

@@ -1,6 +1,5 @@
 package com.myadridev.remembrall.activities;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,6 +8,7 @@ import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -22,7 +22,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toolbar;
 
 import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.adapters.RemindersAdapter;
@@ -86,8 +85,8 @@ public class GroupDetailActivity extends AppCompatActivity {
         setLayout();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.group_toolbar);
-        setActionBar(toolbar);
-        ActionBar actionBar = getActionBar();
+        setSupportActionBar(toolbar);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayUseLogoEnabled(true);
             actionBar.setLogo(android.R.drawable.ic_menu_view);

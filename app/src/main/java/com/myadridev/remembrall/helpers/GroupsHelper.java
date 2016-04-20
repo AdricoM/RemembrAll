@@ -3,11 +3,11 @@ package com.myadridev.remembrall.helpers;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.models.GroupModel;
 import com.myadridev.remembrall.models.ReminderModel;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.util.ArrayList;

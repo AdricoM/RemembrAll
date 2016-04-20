@@ -125,7 +125,7 @@ public class RemindersAdapter extends BaseExpandableListAdapter {
 
                 TextView date = (TextView) view.findViewById(R.id.group_reminders_item_date);
                 TextView time = (TextView) view.findViewById(R.id.group_reminders_item_time);
-                if (item instanceof GroupsItemAddReminder){
+                if (item instanceof GroupsItemAddReminder) {
                     date.setVisibility(View.GONE);
                     time.setVisibility(View.GONE);
                 } else {

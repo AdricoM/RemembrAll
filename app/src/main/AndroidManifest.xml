@@ -39,6 +39,7 @@
 
         <service
             android:name="com.myadridev.remembrall.services.AutoStartService"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE"
             android:enabled="true"/>
 
         <service

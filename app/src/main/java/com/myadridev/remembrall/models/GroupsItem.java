@@ -10,7 +10,7 @@ import com.myadridev.remembrall.helpers.NavigationHelper;
 public class GroupsItem extends ReminderModel implements Comparable<GroupsItem> {
     protected Context context;
 
-    public GroupsItem(Context _context){
+    public GroupsItem(Context _context) {
         context = _context;
     }
 

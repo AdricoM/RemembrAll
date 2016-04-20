@@ -56,6 +56,15 @@ public class AboutAdapter extends ArrayAdapter<AboutItem> {
                         }
                     });
                     break;
+                case SOURCES:
+                    view.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(activity.getString(R.string.about_sources_url)));
+                            activity.startActivity(Intent.createChooser(browserIntent, activity.getString(R.string.about_browser_choice_label)));
+                        }
+                    });
+                    break;
                 default:
                     break;
             }

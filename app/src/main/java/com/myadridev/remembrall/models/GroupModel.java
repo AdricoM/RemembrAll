@@ -23,7 +23,7 @@ public class GroupModel {
     public boolean UseDefaultReminderTime;
 
     @JsonProperty ("drt")
-    @JsonFormat (shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone="CET")
+    @JsonFormat (shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone = "CET")
     public Date DefaultReminderTime;
 
     public GroupModel() {

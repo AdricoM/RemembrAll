@@ -35,7 +35,7 @@ import java.util.List;
  */
 public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
 
-    CoordinatorLayout coordinatorLayout;
+    private CoordinatorLayout coordinatorLayout;
     private HashMap<Integer, Boolean> isItemEnabled;
     private LayoutInflater layoutInflater;
     private Calendar cal = Calendar.getInstance();

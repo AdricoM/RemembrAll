@@ -30,9 +30,9 @@ import java.util.TreeMap;
 public class GroupsAdapter extends BaseExpandableListAdapter {
 
     private final LayoutInflater layoutInflater;
+    private Activity activity;
     private SortedMap<GroupsGroup, List<GroupsItem>> items;
     private List<GroupsGroup> groups;
-    Activity activity;
 
     public GroupsAdapter(Activity _activity, SortedMap<GroupsGroup, List<GroupsItem>> _items) {
         activity = _activity;

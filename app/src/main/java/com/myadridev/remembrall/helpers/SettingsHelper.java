@@ -22,12 +22,11 @@ import java.util.Map;
  */
 public class SettingsHelper {
 
-    public static SettingsHelper Instance;
-
     private static final int DEFAULT_HOUR = 10;
     private static final int DEFAULT_MINUTE = 0;
     private static final String DEFAULT_TIME = String.format("%02d:%02d", DEFAULT_HOUR, DEFAULT_MINUTE);
     private static final int DEFAULT_NUMBER_REMINDER_HOME = 5;
+    public static SettingsHelper Instance;
     private static boolean _isInitialized;
     private final Map<SettingsFieldEnum, SettingsItem> settings;
     private SimpleDateFormat StorageDateFormat;

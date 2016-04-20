@@ -30,7 +30,7 @@ public class ReminderModel {
     public boolean UseCustomReminderTime;
 
     @JsonProperty ("crt")
-    @JsonFormat (shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone="CET")
+    @JsonFormat (shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone = "CET")
     public Date CustomReminderTime;
 
     @JsonProperty ("gId")

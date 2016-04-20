@@ -1,11 +1,10 @@
 package com.myadridev.remembrall.activities;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
-import android.widget.Toolbar;
 
 import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.adapters.SettingsAdapter;
@@ -28,8 +27,8 @@ public class SettingsActivity extends AppCompatActivity {
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.settings_coordinator_layout);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.setting_toolbar);
-        setActionBar(toolbar);
-        ActionBar actionBar = getActionBar();
+        setSupportActionBar(toolbar);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayUseLogoEnabled(true);
             actionBar.setLogo(android.R.drawable.ic_menu_preferences);

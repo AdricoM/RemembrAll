@@ -36,13 +36,13 @@ public class ReminderJobService extends JobService {
         SimpleDateFormat dateFormat = new SimpleDateFormat(getString(R.string.utils_date_format_full));
 
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-            .setSmallIcon(R.drawable.ic_notification)
-            .setColor(ContextCompat.getColor(this, R.color.NotificationBack))
-            .setContentTitle(dateFormat.format(reminder.NextReminderDate) + " - " + reminder.Name)
-            .setContentText(reminder.Description)
-            .setContentIntent(resultPendingIntent)
-            .setCategory(ALARM_SERVICE)
-            .setAutoCancel(true);
+                .setSmallIcon(R.drawable.ic_notification)
+                .setColor(ContextCompat.getColor(this, R.color.NotificationBack))
+                .setContentTitle(dateFormat.format(reminder.NextReminderDate) + " - " + reminder.Name)
+                .setContentText(reminder.Description)
+                .setContentIntent(resultPendingIntent)
+                .setCategory(ALARM_SERVICE)
+                .setAutoCancel(true);
 
         Notification notification = notificationBuilder.build();
         notification.defaults |= Notification.DEFAULT_ALL;

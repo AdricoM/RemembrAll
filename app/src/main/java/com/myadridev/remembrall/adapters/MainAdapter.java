@@ -106,7 +106,7 @@ public class MainAdapter extends BaseExpandableListAdapter {
 
                 View view;
 
-                switch (item.getItemType()){
+                switch (item.getItemType()) {
                     case NEXT_REMINDER:
                         view = layoutInflater.inflate(R.layout.main_item_next_reminder, parent, false);
                         MainItemNextReminder itemNextReminder = (MainItemNextReminder) item;

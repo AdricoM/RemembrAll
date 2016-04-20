@@ -80,4 +80,6 @@
     <string name="group_error_no_reminder_time">Un rappel de ce groupe n\'a pas d\'horaire défini</string>
     <string name="settings_error_no_reminder_time">Un rappel n\'a pas d\'horaire défini</string>
     <string name="utils_date_format_full">dd/MM/yyyy HH:mm</string>
+    <string name="about_sources">Voir les sources sur Github</string>
+    <string name="about_browser_choice_label">Ouvrir le lien avec</string>
 </resources>

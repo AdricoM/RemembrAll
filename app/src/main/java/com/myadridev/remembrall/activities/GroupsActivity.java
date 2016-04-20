@@ -1,12 +1,11 @@
 package com.myadridev.remembrall.activities;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
-import android.widget.Toolbar;
 
 import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.adapters.GroupsAdapter;
@@ -35,8 +34,8 @@ public class GroupsActivity extends AppCompatActivity {
         setContentView(R.layout.groups);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.groups_toolbar);
-        setActionBar(toolbar);
-        ActionBar actionBar = getActionBar();
+        setSupportActionBar(toolbar);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayUseLogoEnabled(true);
             actionBar.setLogo(android.R.drawable.ic_menu_sort_by_size);

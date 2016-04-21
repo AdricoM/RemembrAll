@@ -437,6 +437,8 @@ public class GroupDetailActivity extends AppCompatActivity {
                     startService(new Intent(this, AutoStartService.class));
                     setEditable(false);
                     refreshGroup();
+                    refreshReminders();
+                    createAdapter();
                 }
                 return true;
             case R.id.menu_group_cancel:
@@ -493,6 +495,7 @@ public class GroupDetailActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        refreshGroup();
         refreshReminders();
         createAdapter();
     }

@@ -63,6 +63,7 @@ public class ReminderDetailActivity extends AppCompatActivity {
     private boolean isKeyboardShown;
 
     private CoordinatorLayout coordinatorLayout;
+    private int groupId;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,13 +88,11 @@ public class ReminderDetailActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         setEditable(bundle.getBoolean("isEditable"));
-        refreshReminder(bundle.getInt("reminderId"));
-
         if (bundle.containsKey("groupId")) {
-            int groupId = bundle.getInt("groupId");
-            if (reminder.GroupId == 0)
-                reminder.GroupId = groupId;
+            groupId = bundle.getInt("groupId");
         }
+
+        refreshReminder(bundle.getInt("reminderId"));
         isKeyboardShown = false;
     }
 
@@ -247,6 +246,7 @@ public class ReminderDetailActivity extends AppCompatActivity {
     private void refreshReminder(int reminderId) {
         if (reminderId == 0) {
             reminder = new ReminderModel();
+            reminder.GroupId = groupId;
         } else {
             reminder = new ReminderModel(RemindersHelper.Instance.getReminder(reminderId));
         }
@@ -437,5 +437,11 @@ public class ReminderDetailActivity extends AppCompatActivity {
                 onBackPressed();
                 return true;
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshReminder();
     }
 }

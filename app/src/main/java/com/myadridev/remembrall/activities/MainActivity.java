@@ -27,6 +27,7 @@ import com.myadridev.remembrall.models.SettingsItem;
 import com.myadridev.remembrall.services.AutoStartService;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         quickAccessList.add(new MainItemSeeAllGroups(this));
+        Collections.sort(quickAccessList);
         items.put(quickAccessGroup, quickAccessList);
     }
 
@@ -106,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         for (ReminderModel reminder : nextReminderModelList) {
             nextReminderList.add(new MainItemNextReminder(reminder, this));
         }
+        Collections.sort(nextReminderList);
 
         items.put(comingRemindersGroup, nextReminderList);
     }

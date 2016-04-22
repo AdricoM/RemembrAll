@@ -1,27 +1,27 @@
 <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="6dip">
+
+    <TextView
+        android:id="@+id/settings_label"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center_vertical"
-        android:padding="6dip"
-        android:orientation="vertical">
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="Setting"
+        android:textSize="20sp"/>
 
     <TextView
-            android:id="@+id/settings_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Setting"
-            android:gravity="center_vertical"
-            android:singleLine="true"
-            android:textSize="20sp" />
-
-    <TextView
-            android:id="@+id/settings_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Valeur"
-            android:singleLine="true"
-            android:textSize="14sp" />
+        android:id="@+id/settings_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Valeur"
+        android:textSize="14sp"/>
 
 </LinearLayout>

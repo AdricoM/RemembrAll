@@ -34,4 +34,16 @@ public class MainItemQuickAccessGroup extends MainItem {
     public String getNumberItemsAsString() {
         return String.valueOf(numberItems);
     }
+
+    @Override
+    public int compareTo(MainItem otherItem) {
+        if (otherItem instanceof MainItemQuickAccessGroup) {
+            MainItemQuickAccessGroup castedOtherQuickAccessGroup = (MainItemQuickAccessGroup) otherItem;
+            return name.compareTo(castedOtherQuickAccessGroup.name);
+        } else if (otherItem instanceof MainItemSeeAllGroups) {
+            return -1;
+        } else {
+            return -1;
+        }
+    }
 }

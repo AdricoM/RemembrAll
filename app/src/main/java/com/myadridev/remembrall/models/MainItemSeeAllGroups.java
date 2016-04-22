@@ -26,4 +26,13 @@ public class MainItemSeeAllGroups extends MainItem {
     public String getLabel() {
         return label;
     }
+
+    @Override
+    public int compareTo(MainItem otherItem) {
+        if (otherItem instanceof MainItemSeeAllGroups) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
 }

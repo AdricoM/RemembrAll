@@ -95,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginRight="10dp"
-                        android:layout_weight="1"
+                        android:layout_weight="0"
                         android:text="@string/reminder_description"
                         android:textSize="18sp"/>
 
@@ -163,8 +163,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
-                    android:datePickerMode="spinner"
-                    android:calendarViewShown="false"/>
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"/>
 
                 <!-- use custom reminder time -->
                 <LinearLayout

@@ -11,7 +11,7 @@ import java.util.Date;
  * Created by adrien on 02/03/16.
  */
 @JsonSerialize (as = ReminderModel.class)
-public class ReminderModel {
+public class ReminderModel implements Comparable<ReminderModel> {
     public int Id;
     public String Name;
 
@@ -49,5 +49,27 @@ public class ReminderModel {
         CustomReminderTime = reminder.CustomReminderTime;
         NextReminderDate = reminder.NextReminderDate;
         Achieved = reminder.Achieved;
+    }
+
+    @Override
+    public int compareTo(ReminderModel otherReminder) {
+        if (this instanceof GroupsItemAddReminder) {
+            if (otherReminder instanceof GroupsItemAddReminder) {
+                return 0;
+            } else {
+                return 1;
+            }
+        } else if (otherReminder instanceof GroupsItemAddReminder) {
+            return -1;
+        } else {
+            int compare = NextReminderDate.compareTo(otherReminder.NextReminderDate);
+            if (compare < 0) {
+                return -1;
+            } else if (compare > 0) {
+                return 1;
+            } else {
+                return Name.compareTo(otherReminder.Name);
+            }
+        }
     }
 }

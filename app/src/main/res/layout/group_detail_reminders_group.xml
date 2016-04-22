@@ -28,12 +28,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@id/group_reminders_icon"
         android:layout_toLeftOf="@id/groups_reminders_delete"
+        android:layout_toRightOf="@id/group_reminders_icon"
         android:padding="6dip"
         android:text="@string/group_reminders_list"
-        android:textColor="@color/GroupForeground"
         android:textAlignment="center"
+        android:textColor="@color/GroupForeground"
         android:textSize="22sp"/>
 
 </RelativeLayout>

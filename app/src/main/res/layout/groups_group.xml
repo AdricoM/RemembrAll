@@ -1,46 +1,46 @@
 <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_vertical"
-        android:padding="6dip"
-        android:background="@color/GroupBackGround">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@color/GroupBackGround"
+    android:orientation="horizontal"
+    android:padding="6dip">
 
     <ImageView
         android:id="@+id/groups_group_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:src="@android:drawable/btn_star_big_on"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:src="@android:drawable/btn_star_big_on"/>
 
     <TextView
-            android:id="@+id/groups_group_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Groupe"
-            android:textSize="22sp"
-            android:layout_toRightOf="@id/groups_group_star"
-            android:layout_marginLeft="5dp"
-            android:layout_centerVertical="true"
-            android:textColor="@color/GroupForeground"/>
+        android:id="@+id/groups_group_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/groups_group_star"
+        android:text="Groupe"
+        android:textColor="@color/GroupForeground"
+        android:textSize="22sp"/>
 
     <ImageView
         android:id="@+id/groups_group_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@android:drawable/ic_menu_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:src="@android:drawable/ic_menu_delete"/>
 
     <ImageView
-            android:id="@+id/groups_group_detail"
-            android:layout_toLeftOf="@id/groups_group_delete"
-            android:layout_marginLeft="5dp"
-            android:layout_centerVertical="true"
-            android:src="@android:drawable/ic_menu_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:id="@+id/groups_group_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@id/groups_group_delete"
+        android:src="@android:drawable/ic_menu_view"/>
 
 </RelativeLayout>

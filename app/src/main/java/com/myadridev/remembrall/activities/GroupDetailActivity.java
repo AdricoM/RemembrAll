@@ -39,6 +39,7 @@ import com.myadridev.remembrall.services.AutoStartService;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TimeZone;
@@ -481,6 +482,8 @@ public class GroupDetailActivity extends AppCompatActivity {
             reminders.add(new GroupsItem(reminderModel, this));
         }
         reminders.add(new GroupsItemAddReminder(this, group.Id));
+
+        Collections.sort(reminders);
         GroupDetailGroup remindersGroup = new GroupDetailGroup(0, getString(R.string.group_reminders_list));
         items.put(remindersGroup, reminders);
     }

@@ -19,6 +19,7 @@ import com.myadridev.remembrall.models.GroupsItemAddReminder;
 import com.myadridev.remembrall.models.ReminderModel;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -68,6 +69,8 @@ public class GroupsActivity extends AppCompatActivity {
             }
 
             children.add(new GroupsItemAddReminder(this, group.Id));
+            Collections.sort(children);
+
             items.put(new GroupsGroup(group, this), children);
         }
     }

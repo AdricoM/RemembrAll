@@ -17,9 +17,11 @@ public class MainItemNextReminder extends MainItem {
 
     private String formatedTime;
     private String formatedDate;
+    private ReminderModel reminder;
 
-    public MainItemNextReminder(ReminderModel reminder, Context _context) {
+    public MainItemNextReminder(ReminderModel _reminder, Context _context) {
         super(_context, MainItemEnum.NEXT_REMINDER);
+        reminder = _reminder;
         id = reminder.Id;
         name = reminder.Name;
         SimpleDateFormat dateFormat = new SimpleDateFormat(context.getString(R.string.utils_date_format));
@@ -45,5 +47,22 @@ public class MainItemNextReminder extends MainItem {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int compareTo(MainItem otherItem) {
+        if (otherItem instanceof MainItemNextReminder) {
+            MainItemNextReminder castedOtherNextReminder = (MainItemNextReminder) otherItem;
+            int compare = reminder.NextReminderDate.compareTo(castedOtherNextReminder.reminder.NextReminderDate);
+            if (compare < 0) {
+                return -1;
+            } else if (compare > 0) {
+                return 1;
+            } else {
+                return name.compareTo(castedOtherNextReminder.name);
+            }
+        } else {
+            return -1;
+        }
     }
 }

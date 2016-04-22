@@ -7,7 +7,7 @@ import com.myadridev.remembrall.helpers.NavigationHelper;
 /**
  * Created by adrien on 29/08/15.
  */
-public class GroupsItem extends ReminderModel implements Comparable<GroupsItem> {
+public class GroupsItem extends ReminderModel {
     protected Context context;
 
     public GroupsItem(Context _context) {
@@ -21,17 +21,5 @@ public class GroupsItem extends ReminderModel implements Comparable<GroupsItem> 
 
     public void navigateToReminder() {
         NavigationHelper.navigateToReminder(context, Id, GroupId, Id == 0);
-    }
-
-    @Override
-    public int compareTo(GroupsItem otherReminder) {
-        int compare = Name.compareToIgnoreCase(otherReminder.Name);
-        if (compare < 0) {
-            return -1;
-        } else if (compare > 0) {
-            return 1;
-        } else {
-            return 0;
-        }
     }
 }

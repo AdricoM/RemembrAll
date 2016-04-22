@@ -1,8 +1,8 @@
 package com.myadridev.remembrall.adapters;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -39,15 +39,15 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
     private HashMap<Integer, Boolean> isItemEnabled;
     private LayoutInflater layoutInflater;
     private Calendar cal = Calendar.getInstance();
-    private Activity activity;
+    private Context context;
     private SimpleDateFormat timeFormat = new SimpleDateFormat(getContext().getString(R.string.utils_time_format));
 
-    public SettingsAdapter(Activity _activity, CoordinatorLayout _coordinatorLayout, int resource, List<SettingsItem> items) {
-        super(_activity, resource, items);
-        activity = _activity;
+    public SettingsAdapter(Context _context, CoordinatorLayout _coordinatorLayout, int resource, List<SettingsItem> items) {
+        super(_context, resource, items);
+        context = _context;
         coordinatorLayout = _coordinatorLayout;
         isItemEnabled = new HashMap<>();
-        layoutInflater = LayoutInflater.from(activity);
+        layoutInflater = LayoutInflater.from(context);
     }
 
     @Override
@@ -62,7 +62,7 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
 
             labelView.setText(item.Label);
             if (item.Value instanceof Boolean) {
-                valueView.setText((boolean) item.Value ? activity.getString(R.string.global_yes) : activity.getString(R.string.global_no));
+                valueView.setText((boolean) item.Value ? context.getString(R.string.global_yes) : context.getString(R.string.global_no));
             } else if (item.Value instanceof Date) {
                 valueView.setText(timeFormat.format(item.Value));
             } else {
@@ -103,9 +103,8 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
                 int oldNumber = (int) item.Value;
                 final int[] newNumber = {oldNumber};
 
-                AlertDialog.Builder numberRemindersDialogBuilder = new AlertDialog.Builder(activity, R.style.AlertDialogStyle);
+                AlertDialog.Builder numberRemindersDialogBuilder = new AlertDialog.Builder(context, R.style.AlertDialogStyle);
 
-                LayoutInflater layoutInflater = activity.getLayoutInflater();
                 View numberPickerView = layoutInflater.inflate(R.layout.number_picker_dialog, null);
                 final NumberPicker numberPicker = (NumberPicker) numberPickerView.findViewById(R.id.number_picker);
                 numberPicker.setMinValue(1);
@@ -113,9 +112,9 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
                 numberPicker.setValue(oldNumber);
                 numberPicker.setWrapSelectorWheel(false);
 
-                numberRemindersDialogBuilder.setTitle(activity.getString(R.string.settings_number_reminders_home_title));
+                numberRemindersDialogBuilder.setTitle(context.getString(R.string.settings_number_reminders_home_title));
                 numberRemindersDialogBuilder.setView(numberPickerView);
-                numberRemindersDialogBuilder.setPositiveButton(activity.getString(R.string.global_ok),
+                numberRemindersDialogBuilder.setPositiveButton(context.getString(R.string.global_ok),
                         new DialogInterface.OnClickListener() {
 
                             @Override
@@ -128,7 +127,7 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
                                 dialog.dismiss();
                             }
                         });
-                numberRemindersDialogBuilder.setNegativeButton(activity.getString(R.string.global_cancel), new DialogInterface.OnClickListener() {
+                numberRemindersDialogBuilder.setNegativeButton(context.getString(R.string.global_cancel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int index) {
                         dialog.dismiss();
@@ -146,14 +145,14 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
             @Override
             public void onClick(View v) {
                 Date oldDate = (Date) item.Value;
-                boolean is12HoursFormat = activity.getString(R.string.utils_time_format).endsWith("a");
+                boolean is12HoursFormat = context.getString(R.string.utils_time_format).endsWith("a");
 
                 cal.setTime(oldDate);
 
                 int hour = cal.get(Calendar.HOUR_OF_DAY);
                 int minute = cal.get(Calendar.MINUTE);
 
-                TimePickerDialog timePickerDialog = new TimePickerDialog(activity, R.style.AlertDialogStyle, new TimePickerDialog.OnTimeSetListener() {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(context, R.style.AlertDialogStyle, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
                         cal.set(Calendar.HOUR_OF_DAY, selectedHour);
@@ -167,12 +166,12 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
                         for (int groupId : GroupsHelper.Instance.getAllGroupIds()) {
                             RemindersHelper.Instance.refreshNextReminderDateByGroupIs(groupId);
                         }
-                        activity.startService(new Intent(activity, AutoStartService.class));
+                        context.startService(new Intent(context, AutoStartService.class));
                         notifyDataSetChanged();
                     }
                 }, hour, minute, !is12HoursFormat); // true = 24 hour time
 
-                timePickerDialog.setTitle(activity.getString(R.string.settings_timepicker_title));
+                timePickerDialog.setTitle(context.getString(R.string.settings_timepicker_title));
                 timePickerDialog.show();
             }
         };
@@ -183,10 +182,10 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
             @Override
             public void onClick(View v) {
                 final boolean oldValue = (boolean) item.Value;
-                final CharSequence[] choices = {activity.getString(R.string.global_yes), activity.getString(R.string.global_no)};
+                final CharSequence[] choices = {context.getString(R.string.global_yes), context.getString(R.string.global_no)};
 
-                AlertDialog.Builder defaultTimeDialogBuilder = new AlertDialog.Builder(activity, R.style.AlertDialogStyle);
-                defaultTimeDialogBuilder.setTitle(activity.getString(R.string.settings_use_default_reminder_time_title));
+                AlertDialog.Builder defaultTimeDialogBuilder = new AlertDialog.Builder(context, R.style.AlertDialogStyle);
+                defaultTimeDialogBuilder.setTitle(context.getString(R.string.settings_use_default_reminder_time_title));
                 defaultTimeDialogBuilder.setSingleChoiceItems(choices, oldValue ? 0 : 1,
                         new DialogInterface.OnClickListener() {
                             @Override
@@ -217,7 +216,7 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
                                         notifyDataSetChanged();
                                     } else {
                                         item.setValue(oldValue);
-                                        ErrorHelper.getSnackbar(activity, coordinatorLayout, activity.getString(R.string.settings_error_no_reminder_time)).show();
+                                        ErrorHelper.getSnackbar(context, coordinatorLayout, context.getString(R.string.settings_error_no_reminder_time)).show();
                                     }
                                     dialog.dismiss();
                                 }

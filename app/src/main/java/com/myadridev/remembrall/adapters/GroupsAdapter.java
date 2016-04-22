@@ -1,7 +1,7 @@
 package com.myadridev.remembrall.adapters;
 
-import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,8 +16,10 @@ import com.myadridev.remembrall.R;
 import com.myadridev.remembrall.helpers.GroupsHelper;
 import com.myadridev.remembrall.models.GroupsGroup;
 import com.myadridev.remembrall.models.GroupsItem;
+import com.myadridev.remembrall.models.GroupsItemAddReminder;
 import com.myadridev.remembrall.services.AutoStartService;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -30,15 +32,20 @@ import java.util.TreeMap;
 public class GroupsAdapter extends BaseExpandableListAdapter {
 
     private final LayoutInflater layoutInflater;
-    private Activity activity;
+    private Context context;
     private SortedMap<GroupsGroup, List<GroupsItem>> items;
     private List<GroupsGroup> groups;
 
-    public GroupsAdapter(Activity _activity, SortedMap<GroupsGroup, List<GroupsItem>> _items) {
-        activity = _activity;
-        layoutInflater = LayoutInflater.from(activity);
+    private SimpleDateFormat dateFormat;
+    private SimpleDateFormat timeFormat;
+
+    public GroupsAdapter(Context _context, SortedMap<GroupsGroup, List<GroupsItem>> _items) {
+        context = _context;
+        layoutInflater = LayoutInflater.from(context);
         items = new TreeMap<>();
         groups = new ArrayList<>(_items.size());
+        dateFormat = new SimpleDateFormat(context.getString(R.string.utils_date_format));
+        timeFormat = new SimpleDateFormat(context.getString(R.string.utils_time_format));
         for (Map.Entry<GroupsGroup, List<GroupsItem>> groupWithChildren : _items.entrySet()) {
             List<GroupsItem> children = new ArrayList<>(groupWithChildren.getValue());
             GroupsGroup group = groupWithChildren.getKey();
@@ -149,7 +156,7 @@ public class GroupsAdapter extends BaseExpandableListAdapter {
                             items.remove(group);
                             dialog.dismiss();
                             notifyDataSetChanged();
-                            activity.startService(new Intent(activity, AutoStartService.class));
+                            context.startService(new Intent(context, AutoStartService.class));
                         }
                     });
 
@@ -175,6 +182,18 @@ public class GroupsAdapter extends BaseExpandableListAdapter {
             if (item != null) {
                 TextView value = (TextView) view.findViewById(R.id.groups_item);
                 value.setText(item.Name);
+
+                TextView date = (TextView) view.findViewById(R.id.groups_item_date);
+                TextView time = (TextView) view.findViewById(R.id.groups_item_time);
+                if (item instanceof GroupsItemAddReminder) {
+                    date.setVisibility(View.GONE);
+                    time.setVisibility(View.GONE);
+                } else {
+                    date.setText(dateFormat.format(item.NextReminderDate));
+                    date.setVisibility(View.VISIBLE);
+                    time.setText(timeFormat.format(item.NextReminderDate));
+                    time.setVisibility(View.VISIBLE);
+                }
 
                 if (childPosition % 2 == 0) {
                     view.setBackgroundColor(Color.WHITE);

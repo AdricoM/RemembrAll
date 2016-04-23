@@ -96,9 +96,9 @@
     <string name="settings_error_no_reminder_time">A reminder has no time defined</string>
     <string name="utils_date_format_full">yyyy/MM/dd hh:mm a</string>
     <string name="about_sources">View sources on Github</string>
-    <string name="about_sources_url" translatable="false">https://github.com/AdricoM/rememberall</string>
+    <string name="about_sources_url" translatable="false">https://github.com/AdricoM/remembrall</string>
     <string name="about_browser_choice_label">Open link with</string>
     <string name="about_license">License</string>
     <string name="about_license_value">The Beer-ware license</string>
-    <string name="about_license_detail">"THE BEER-WARE LICENSE" (Revision 42): <![CDATA[<myadridev@gmail.com>]]> wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return Adrien Marion</string>
+    <string name="about_license_detail">"THE BEER-WARE LICENSE" (Revision 42): <![CDATA[<myadridev@gmail.com>]]> wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return Adrien</string>
 </resources>

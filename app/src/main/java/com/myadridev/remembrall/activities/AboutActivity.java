@@ -57,6 +57,7 @@ public class AboutActivity extends AppCompatActivity {
         items.add(new AboutItem(this, AboutFieldsEnum.VERSION, version));
         items.add(new AboutItem(this, AboutFieldsEnum.CONTACT, getString(R.string.about_mail)));
         items.add(new AboutItem(this, AboutFieldsEnum.SOURCES, getString(R.string.about_sources_url)));
+        items.add(new AboutItem(this, AboutFieldsEnum.LICENSE, getString(R.string.about_license_value)));
 
         Collections.sort(items);
 

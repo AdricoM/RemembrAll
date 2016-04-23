@@ -8,7 +8,8 @@ import com.myadridev.remembrall.R;
 public enum AboutFieldsEnum {
     VERSION(0, R.string.about_version),
     CONTACT(1, R.string.about_contact),
-    SOURCES(2, R.string.about_sources);
+    SOURCES(2, R.string.about_sources),
+    LICENSE(3, R.string.about_license);
 
     private int index;
     private int stringResource;

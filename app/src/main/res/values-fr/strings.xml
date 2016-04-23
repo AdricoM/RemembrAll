@@ -82,4 +82,7 @@
     <string name="utils_date_format_full">dd/MM/yyyy HH:mm</string>
     <string name="about_sources">Voir les sources sur Github</string>
     <string name="about_browser_choice_label">Ouvrir le lien avec</string>
+    <string name="about_license">Licence</string>
+    <string name="about_license_value">Licence Beerware</string>
+    <string name="about_license_detail">"LICENCE BEERWARE" (Révision 42): <![CDATA[<myadridev@gmail.com>]]> a créé ce fichier. Tant que vous conservez cet avertissement, vous pouvez faire ce que vous voulez de ce truc. Si on se rencontre un jour et que vous pensez que ce truc vaut le coup, vous pouvez me payer une bière en retour. Adrien Marion</string>
 </resources>

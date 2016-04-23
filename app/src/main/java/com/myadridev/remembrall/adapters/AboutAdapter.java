@@ -1,5 +1,6 @@
 package com.myadridev.remembrall.adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -62,6 +63,17 @@ public class AboutAdapter extends ArrayAdapter<AboutItem> {
                         public void onClick(View v) {
                             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(context.getString(R.string.about_sources_url)));
                             context.startActivity(Intent.createChooser(browserIntent, context.getString(R.string.about_browser_choice_label)));
+                        }
+                    });
+                    break;
+                case LICENSE:
+                    view.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            AlertDialog.Builder licenseDialogBuilder = new AlertDialog.Builder(context);
+                            licenseDialogBuilder.setTitle(context.getString(R.string.about_license));
+                            licenseDialogBuilder.setMessage(context.getString(R.string.about_license_detail));
+                            licenseDialogBuilder.show();
                         }
                     });
                     break;

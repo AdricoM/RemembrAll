@@ -77,6 +77,8 @@ public class GroupDetailActivity extends AppCompatActivity {
 
     private CoordinatorLayout coordinatorLayout;
 
+    private boolean wasEditableBeforePause;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +107,7 @@ public class GroupDetailActivity extends AppCompatActivity {
         setEditable(bundle.getBoolean("isEditable"));
         refreshGroup(bundle.getInt("groupId"));
         isKeyboardShown = false;
+        wasEditableBeforePause = false;
 
         items = new TreeMap<>();
     }
@@ -496,10 +499,18 @@ public class GroupDetailActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        wasEditableBeforePause = isEditable;
+        super.onPause();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
-        refreshGroup();
-        refreshReminders();
-        createAdapter();
+        if (!wasEditableBeforePause) {
+            refreshGroup();
+            refreshReminders();
+            createAdapter();
+        }
     }
 }

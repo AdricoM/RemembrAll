@@ -65,6 +65,8 @@ public class ReminderDetailActivity extends AppCompatActivity {
     private CoordinatorLayout coordinatorLayout;
     private int groupId;
 
+    private boolean wasEditableBeforePause;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +96,7 @@ public class ReminderDetailActivity extends AppCompatActivity {
 
         refreshReminder(bundle.getInt("reminderId"));
         isKeyboardShown = false;
+        wasEditableBeforePause = false;
     }
 
     private void setLayout() {
@@ -440,8 +443,16 @@ public class ReminderDetailActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        wasEditableBeforePause = isEditable;
+        super.onPause();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
-        refreshReminder();
+        if (!wasEditableBeforePause) {
+            refreshReminder();
+        }
     }
 }

@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0'
+        classpath 'com.android.tools.build:gradle:2.1.0'
     }
 }
 apply plugin: 'com.android.application'
@@ -19,8 +19,8 @@ android {
         applicationId "com.myadridev.rememberall"
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 3
-        versionName "1.0.1"
+        versionCode 4
+        versionName "1.0.2"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7

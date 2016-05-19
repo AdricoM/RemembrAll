@@ -31,7 +31,7 @@ public class ReminderJobService extends JobService {
 
         Intent resultIntent = NavigationHelper.getNavigateToReminderIntent(this, reminderId, false);
 
-        PendingIntent resultPendingIntent = PendingIntent.getActivity(this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(this, reminderId, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat(getString(R.string.utils_date_format_full));
 

@@ -1,6 +1,7 @@
 package com.myadridev.rememberall.models;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.myadridev.rememberall.R;
 import com.myadridev.rememberall.enums.MainItemEnum;
@@ -8,9 +9,6 @@ import com.myadridev.rememberall.helpers.NavigationHelper;
 
 import java.text.SimpleDateFormat;
 
-/**
- * Created by adrien on 29/08/15.
- */
 public class MainItemNextReminder extends MainItem {
     private int id;
     private String name;
@@ -50,7 +48,7 @@ public class MainItemNextReminder extends MainItem {
     }
 
     @Override
-    public int compareTo(MainItem otherItem) {
+    public int compareTo(@NonNull MainItem otherItem) {
         if (otherItem instanceof MainItemNextReminder) {
             MainItemNextReminder castedOtherNextReminder = (MainItemNextReminder) otherItem;
             int compare = reminder.NextReminderDate.compareTo(castedOtherNextReminder.reminder.NextReminderDate);

@@ -1,6 +1,7 @@
 package com.myadridev.rememberall.models;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.myadridev.rememberall.R;
 import com.myadridev.rememberall.enums.SettingsFieldEnum;
@@ -47,7 +48,7 @@ public class SettingsItem implements Comparable<SettingsItem> {
     }
 
     @Override
-    public int compareTo(SettingsItem otherSetting) {
+    public int compareTo(@NonNull SettingsItem otherSetting) {
         int compare = SettingsFieldEnum.compare(otherSetting.SettingsFieldEnum);
         if (compare < 0) {
             return -1;

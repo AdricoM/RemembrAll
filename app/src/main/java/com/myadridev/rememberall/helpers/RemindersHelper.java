@@ -21,9 +21,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by adrien on 30/08/15.
- */
 public class RemindersHelper {
 
     public static RemindersHelper Instance;
@@ -67,9 +64,9 @@ public class RemindersHelper {
     }
 
     private void loadAllReminders(SharedPreferences storedReminders) {
-        Set<String> allRemindersJson = storedReminders.getStringSet(remindersSet, new HashSet<String>());
+        Set<String> allRemindersJson = storedReminders.getStringSet(remindersSet, new HashSet<>());
         for (String reminderJson : allRemindersJson) {
-            ReminderModel reminder = null;
+            ReminderModel reminder;
             try {
                 reminder = jsonMapper.readValue(reminderJson, ReminderModel.class);
             } catch (IOException e) {
@@ -117,7 +114,7 @@ public class RemindersHelper {
         reminder.Id = MaxReminderId;
         refreshNextReminderDate(reminder);
 
-        String reminderJson = "";
+        String reminderJson;
         try {
             reminderJson = jsonMapper.writeValueAsString(reminder);
         } catch (JsonProcessingException e) {
@@ -134,7 +131,7 @@ public class RemindersHelper {
     public void editReminder(ReminderModel reminder) {
         refreshNextReminderDate(reminder);
 
-        String reminderJson = "";
+        String reminderJson;
         try {
             reminderJson = jsonMapper.writeValueAsString(reminder);
         } catch (JsonProcessingException e) {

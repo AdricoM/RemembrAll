@@ -2,9 +2,6 @@ package com.myadridev.rememberall.helpers;
 
 import android.content.Context;
 
-/**
- * Created by adrien on 16/04/16.
- */
 public class Helper {
 
     public static void InitializeHelpers(Context context) {

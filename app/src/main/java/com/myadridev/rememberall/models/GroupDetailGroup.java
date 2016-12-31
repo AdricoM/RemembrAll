@@ -1,8 +1,7 @@
 package com.myadridev.rememberall.models;
 
-/**
- * Created by adrien on 29/08/15.
- */
+import android.support.annotation.NonNull;
+
 public class GroupDetailGroup implements Comparable<GroupDetailGroup> {
     public int Index;
     public String Title;
@@ -13,7 +12,7 @@ public class GroupDetailGroup implements Comparable<GroupDetailGroup> {
     }
 
     @Override
-    public int compareTo(GroupDetailGroup otherGroup) {
+    public int compareTo(@NonNull GroupDetailGroup otherGroup) {
         if (Index < otherGroup.Index) {
             return -1;
         } else if (Index > otherGroup.Index) {

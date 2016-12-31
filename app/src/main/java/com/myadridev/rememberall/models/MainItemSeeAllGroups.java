@@ -1,14 +1,12 @@
 package com.myadridev.rememberall.models;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.myadridev.rememberall.R;
 import com.myadridev.rememberall.enums.MainItemEnum;
 import com.myadridev.rememberall.helpers.NavigationHelper;
 
-/**
- * Created by adrien on 29/08/15.
- */
 public class MainItemSeeAllGroups extends MainItem {
     private String label;
 
@@ -28,7 +26,7 @@ public class MainItemSeeAllGroups extends MainItem {
     }
 
     @Override
-    public int compareTo(MainItem otherItem) {
+    public int compareTo(@NonNull MainItem otherItem) {
         if (otherItem instanceof MainItemSeeAllGroups) {
             return 0;
         } else {

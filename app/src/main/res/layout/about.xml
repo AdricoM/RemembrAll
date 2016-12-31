@@ -1,5 +1,4 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -9,13 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:popupTheme="@android:style/ThemeOverlay.Material.Light"
-        android:theme="@style/ToolbarTheme">
-    </android.support.v7.widget.Toolbar>
+        android:theme="@style/ToolbarTheme" />
 
     <ListView
         android:id="@+id/about_list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:choiceMode="none"/>
+        android:choiceMode="none" />
 
 </LinearLayout>

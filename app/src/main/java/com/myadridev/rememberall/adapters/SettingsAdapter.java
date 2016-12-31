@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,9 +31,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by adrien on 24/08/15.
- */
 public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
 
     private CoordinatorLayout coordinatorLayout;
@@ -50,8 +48,9 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
         layoutInflater = LayoutInflater.from(context);
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         View view = layoutInflater.inflate(R.layout.settings_item, null);
 
         final SettingsItem item = getItem(position);
@@ -191,7 +190,7 @@ public class SettingsAdapter extends ArrayAdapter<SettingsItem> {
                             @Override
                             public void onClick(DialogInterface dialog, int index) {
                                 boolean choice = false;
-                                boolean isChoiceOk = false;
+                                boolean isChoiceOk;
                                 switch (index) {
                                     case 0:
                                         isChoiceOk = true;

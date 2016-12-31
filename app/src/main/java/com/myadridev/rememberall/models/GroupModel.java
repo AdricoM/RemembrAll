@@ -6,24 +6,21 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.util.Date;
 
-/**
- * Created by adrien on 02/03/16.
- */
-@JsonSerialize (as = GroupModel.class)
+@JsonSerialize(as = GroupModel.class)
 public class GroupModel {
     public int Id;
     public String Name;
 
     public String Description;
 
-    @JsonProperty ("iqa")
+    @JsonProperty("iqa")
     public boolean IsQuickAccess;
 
-    @JsonProperty ("udrt")
+    @JsonProperty("udrt")
     public boolean UseDefaultReminderTime;
 
-    @JsonProperty ("drt")
-    @JsonFormat (shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone = "CET")
+    @JsonProperty("drt")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone = "CET")
     public Date DefaultReminderTime;
 
     public GroupModel() {

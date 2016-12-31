@@ -17,9 +17,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by adrien on 30/08/15.
- */
 public class SettingsHelper {
 
     private static final int DEFAULT_HOUR = 10;

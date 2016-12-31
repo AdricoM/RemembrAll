@@ -1,5 +1,7 @@
 package com.myadridev.rememberall.models;
 
+import android.support.annotation.NonNull;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,10 +9,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.util.Date;
 
-/**
- * Created by adrien on 02/03/16.
- */
-@JsonSerialize (as = ReminderModel.class)
+@JsonSerialize(as = ReminderModel.class)
 public class ReminderModel implements Comparable<ReminderModel> {
     public int Id;
     public String Name;
@@ -22,18 +21,18 @@ public class ReminderModel implements Comparable<ReminderModel> {
     @JsonIgnore
     public Date NextReminderDate;
 
-    @JsonProperty ("rd")
-    @JsonFormat (shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
+    @JsonProperty("rd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
     public Date ReminderDate;
 
-    @JsonProperty ("ucrt")
+    @JsonProperty("ucrt")
     public boolean UseCustomReminderTime;
 
-    @JsonProperty ("crt")
-    @JsonFormat (shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone = "CET")
+    @JsonProperty("crt")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone = "CET")
     public Date CustomReminderTime;
 
-    @JsonProperty ("gId")
+    @JsonProperty("gId")
     public int GroupId;
 
     public ReminderModel() {
@@ -52,7 +51,7 @@ public class ReminderModel implements Comparable<ReminderModel> {
     }
 
     @Override
-    public int compareTo(ReminderModel otherReminder) {
+    public int compareTo(@NonNull ReminderModel otherReminder) {
         if (this instanceof GroupsItemAddReminder) {
             if (otherReminder instanceof GroupsItemAddReminder) {
                 return 0;

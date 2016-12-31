@@ -17,9 +17,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by adrien on 30/08/15.
- */
 public class GroupsHelper {
 
     public static GroupsHelper Instance;
@@ -59,9 +56,9 @@ public class GroupsHelper {
     }
 
     private void loadAllGroups(SharedPreferences storedGroups) {
-        Set<String> allGroupsJson = storedGroups.getStringSet(groupsSet, new HashSet<String>());
+        Set<String> allGroupsJson = storedGroups.getStringSet(groupsSet, new HashSet<>());
         for (String groupJson : allGroupsJson) {
-            GroupModel group = null;
+            GroupModel group;
             try {
                 group = jsonMapper.readValue(groupJson, GroupModel.class);
             } catch (IOException e) {
@@ -81,15 +78,14 @@ public class GroupsHelper {
     }
 
     public GroupModel getGroup(int id) {
-        GroupModel groupModel = groups.containsKey(id) ? groups.get(id) : null;
-        return groupModel;
+        return groups.containsKey(id) ? groups.get(id) : null;
     }
 
     public int addGroup(GroupModel group) {
         MaxGroupId++;
         group.Id = MaxGroupId;
 
-        String groupJson = "";
+        String groupJson;
         try {
             groupJson = jsonMapper.writeValueAsString(group);
         } catch (JsonProcessingException e) {
@@ -104,7 +100,7 @@ public class GroupsHelper {
     }
 
     public void editGroup(GroupModel group) {
-        String groupJson = "";
+        String groupJson;
         try {
             groupJson = jsonMapper.writeValueAsString(group);
         } catch (JsonProcessingException e) {

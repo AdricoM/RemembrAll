@@ -4,9 +4,6 @@ import android.content.Context;
 
 import com.myadridev.rememberall.helpers.NavigationHelper;
 
-/**
- * Created by adrien on 29/08/15.
- */
 public class GroupsItem extends ReminderModel {
     protected Context context;
 

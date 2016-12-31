@@ -2,9 +2,6 @@ package com.myadridev.rememberall.enums;
 
 import com.myadridev.rememberall.R;
 
-/**
- * Created by adrien on 10/09/15.
- */
 public enum AboutFieldsEnum {
     VERSION(0, R.string.about_version),
     CONTACT(1, R.string.about_contact),

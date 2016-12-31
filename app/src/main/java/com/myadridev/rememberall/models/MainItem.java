@@ -4,9 +4,6 @@ import android.content.Context;
 
 import com.myadridev.rememberall.enums.MainItemEnum;
 
-/**
- * Created by adrien on 29/08/15.
- */
 public abstract class MainItem implements Comparable<MainItem> {
     protected Context context;
     private MainItemEnum itemType;

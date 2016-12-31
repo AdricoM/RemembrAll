@@ -4,9 +4,6 @@ import android.content.Context;
 
 import com.myadridev.rememberall.R;
 
-/**
- * Created by adrien on 29/08/15.
- */
 public class GroupsItemAddReminder extends GroupsItem {
 
     public GroupsItemAddReminder(Context _context, int groupId) {

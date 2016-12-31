@@ -289,8 +289,6 @@ public class GroupDetailActivity extends AppCompatActivity {
             defaultReminderTimeLayout.setVisibility(View.GONE);
         }
 
-        TimeZone timeZone = cal.getTimeZone();
-
         if (group.DefaultReminderTime != null) {
             cal.setTime(group.DefaultReminderTime);
         } else {
@@ -331,7 +329,6 @@ public class GroupDetailActivity extends AppCompatActivity {
         cal.set(Calendar.HOUR_OF_DAY, SdkHelper.getHour(defaultReminderTimeEdit));
         cal.set(Calendar.MINUTE, SdkHelper.getMinute(defaultReminderTimeEdit));
 
-        TimeZone timeZone = cal.getTimeZone();
         group.DefaultReminderTime = cal.getTime();
 
         return !checkValues();

@@ -21,9 +21,6 @@ import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-/**
- * Created by adrien on 24/08/15.
- */
 public class RemindersAdapter extends BaseExpandableListAdapter {
 
     private final LayoutInflater layoutInflater;
@@ -74,8 +71,7 @@ public class RemindersAdapter extends BaseExpandableListAdapter {
     public Object getChild(int groupPosition, int childPosition) {
         GroupDetailGroup key = groups.get(groupPosition);
         List<GroupsItem> groupsItems = items.get(key);
-        GroupsItem groupsItem = groupsItems.get(childPosition);
-        return groupsItem;
+        return groupsItems.get(childPosition);
     }
 
     @Override

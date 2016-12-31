@@ -3,9 +3,6 @@ package com.myadridev.rememberall.helpers;
 import android.os.Build;
 import android.widget.TimePicker;
 
-/**
- * Created by adrien on 02/04/16.
- */
 public class SdkHelper {
 
     public static int getMinute(TimePicker timePicker) {

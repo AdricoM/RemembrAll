@@ -1,8 +1,7 @@
 package com.myadridev.rememberall.models;
 
-/**
- * Created by adrien on 29/08/15.
- */
+import android.support.annotation.NonNull;
+
 public class MainGroup implements Comparable<MainGroup> {
     public int Index;
     public String Title;
@@ -15,7 +14,7 @@ public class MainGroup implements Comparable<MainGroup> {
     }
 
     @Override
-    public int compareTo(MainGroup otherGroup) {
+    public int compareTo(@NonNull MainGroup otherGroup) {
         if (Index < otherGroup.Index) {
             return -1;
         } else if (Index > otherGroup.Index) {

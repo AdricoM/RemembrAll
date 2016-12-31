@@ -2,9 +2,6 @@ package com.myadridev.rememberall.enums;
 
 import com.myadridev.rememberall.R;
 
-/**
- * Created by adrien on 30/08/15.
- */
 public enum SettingsFieldEnum {
     USE_DEFAULT_REMINDER_TIME(0, R.string.settings_use_default_reminder_time),
     DEFAULT_REMINDER_TIME(1, R.string.settings_default_reminder_time),

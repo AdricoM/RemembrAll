@@ -16,9 +16,6 @@ import com.myadridev.rememberall.models.ReminderModel;
 
 import java.text.SimpleDateFormat;
 
-/**
- * Created by adrien on 16/04/16.
- */
 public class ReminderJobService extends JobService {
     @Override
     public boolean onStartJob(JobParameters params) {

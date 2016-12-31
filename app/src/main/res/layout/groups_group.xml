@@ -1,5 +1,4 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
@@ -11,36 +10,36 @@
         android:id="@+id/groups_group_star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:src="@android:drawable/btn_star_big_on"/>
+        android:src="@android:drawable/btn_star_big_on" />
 
     <TextView
         android:id="@+id/groups_group_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/groups_group_star"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/groups_group_star"
         android:text="Groupe"
         android:textColor="@color/GroupForeground"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
     <ImageView
         android:id="@+id/groups_group_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:src="@android:drawable/ic_menu_delete"/>
+        android:src="@android:drawable/ic_menu_delete" />
 
     <ImageView
         android:id="@+id/groups_group_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
-        android:layout_toLeftOf="@id/groups_group_delete"
-        android:src="@android:drawable/ic_menu_view"/>
+        android:layout_marginStart="5dp"
+        android:layout_toStartOf="@id/groups_group_delete"
+        android:src="@android:drawable/ic_menu_view" />
 
 </RelativeLayout>

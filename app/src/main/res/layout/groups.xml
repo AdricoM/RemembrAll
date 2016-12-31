@@ -1,5 +1,4 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -9,23 +8,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:popupTheme="@android:style/ThemeOverlay.Material.Light"
-        android:theme="@style/ToolbarTheme">
-    </android.support.v7.widget.Toolbar>
+        android:theme="@style/ToolbarTheme" />
 
     <ExpandableListView
         android:id="@+id/groups_exp_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:groupIndicator="@null"/>
+        android:groupIndicator="@null" />
 
     <TextView
         android:id="@+id/no_groups"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:singleLine="true"
+        android:maxLines="1"
         android:text="@string/groups_no_group"
         android:textSize="18sp"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 </LinearLayout>

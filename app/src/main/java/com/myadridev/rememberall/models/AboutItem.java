@@ -1,6 +1,7 @@
 package com.myadridev.rememberall.models;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.myadridev.rememberall.enums.AboutFieldsEnum;
 
@@ -18,7 +19,7 @@ public class AboutItem implements Comparable<AboutItem> {
     }
 
     @Override
-    public int compareTo(AboutItem otherItem) {
+    public int compareTo(@NonNull AboutItem otherItem) {
         int compare = AboutFieldsEnum.compare(otherItem.AboutFieldsEnum);
         if (compare < 0) {
             return -1;

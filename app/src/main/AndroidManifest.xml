@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.myadridev.rememberall"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myadridev.rememberall">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -14,46 +13,45 @@
             android:name="com.myadridev.rememberall.activities.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.myadridev.rememberall.activities.SettingsActivity"
             android:label="@string/title_settings"
-            android:parentActivityName="com.myadridev.rememberall.activities.MainActivity"/>
+            android:parentActivityName="com.myadridev.rememberall.activities.MainActivity" />
         <activity
             android:name="com.myadridev.rememberall.activities.AboutActivity"
             android:label="@string/title_about"
-            android:parentActivityName="com.myadridev.rememberall.activities.MainActivity"/>
+            android:parentActivityName="com.myadridev.rememberall.activities.MainActivity" />
         <activity
             android:name="com.myadridev.rememberall.activities.GroupsActivity"
             android:label="@string/title_groups"
-            android:parentActivityName="com.myadridev.rememberall.activities.MainActivity"/>
+            android:parentActivityName="com.myadridev.rememberall.activities.MainActivity" />
         <activity
             android:name="com.myadridev.rememberall.activities.GroupDetailActivity"
             android:label="@string/title_group_detail"
-            android:parentActivityName="com.myadridev.rememberall.activities.GroupsActivity"/>
+            android:parentActivityName="com.myadridev.rememberall.activities.GroupsActivity" />
         <activity
             android:name="com.myadridev.rememberall.activities.ReminderDetailActivity"
             android:label="@string/title_reminder_detail"
-            android:parentActivityName="com.myadridev.rememberall.activities.GroupDetailActivity"/>
+            android:parentActivityName="com.myadridev.rememberall.activities.GroupDetailActivity" />
 
         <service
             android:name="com.myadridev.rememberall.services.AutoStartService"
-            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE"
-            android:enabled="true"/>
+            android:enabled="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" />
 
         <service
             android:name="com.myadridev.rememberall.services.ReminderJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE">
-        </service>
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver
             android:name="com.myadridev.rememberall.services.BootReceiver"
             android:enabled="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
     </application>

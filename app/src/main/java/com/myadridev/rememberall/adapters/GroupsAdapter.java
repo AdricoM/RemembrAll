@@ -26,9 +26,6 @@ import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-/**
- * Created by adrien on 24/08/15.
- */
 public class GroupsAdapter extends BaseExpandableListAdapter {
 
     private final LayoutInflater layoutInflater;

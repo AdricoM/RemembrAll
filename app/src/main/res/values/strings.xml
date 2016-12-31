@@ -12,7 +12,7 @@
     <string name="global_default" translatable="false">-</string>
     <string name="global_yes">Yes</string>
     <string name="global_no">No</string>
-    <string name="global_ok">Ok</string>
+    <string name="global_ok">OK</string>
     <string name="global_cancel">Cancel</string>
 
     <!-- Filenames -->
@@ -67,8 +67,8 @@
     <string name="group_delete_confirmation">Do you want to delete the group?</string>
     <string name="menu_group_quick_access_off">Add to quick access</string>
     <string name="menu_group_quick_access_on">Remove from quick access</string>
-    <string name="main_see_all_groups">See all groups...</string>
-    <string name="groups_add_reminder">Add a reminder...</string>
+    <string name="main_see_all_groups">See all groups…</string>
+    <string name="groups_add_reminder">Add a reminder…</string>
     <string name="store_groups" translatable="false">groups</string>
     <string name="store_reminders" translatable="false">reminders</string>
     <string name="group_use_default_reminder_time">Use default time for the reminders of the group</string>

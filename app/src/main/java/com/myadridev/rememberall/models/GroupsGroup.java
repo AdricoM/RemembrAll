@@ -1,12 +1,10 @@
 package com.myadridev.rememberall.models;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.myadridev.rememberall.helpers.NavigationHelper;
 
-/**
- * Created by adrien on 29/08/15.
- */
 public class GroupsGroup extends GroupModel implements Comparable<GroupsGroup> {
     private Context context;
 
@@ -24,7 +22,7 @@ public class GroupsGroup extends GroupModel implements Comparable<GroupsGroup> {
     }
 
     @Override
-    public int compareTo(GroupsGroup otherGroup) {
+    public int compareTo(@NonNull GroupsGroup otherGroup) {
         int compare = Name.compareToIgnoreCase(otherGroup.Name);
         if (compare < 0) {
             return -1;

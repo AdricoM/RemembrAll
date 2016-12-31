@@ -54,8 +54,8 @@
     <string name="group_delete_confirmation">Voulez-vous supprimer le groupe ?</string>
     <string name="menu_group_quick_access_off">Ajouter à l\'accès rapide</string>
     <string name="menu_group_quick_access_on">Retirer de l\'accès rapide</string>
-    <string name="main_see_all_groups">Voir tous les groupes...</string>
-    <string name="groups_add_reminder">Ajouter un rappel...</string>
+    <string name="main_see_all_groups">Voir tous les groupes…</string>
+    <string name="groups_add_reminder">Ajouter un rappel…</string>
     <string name="group_use_default_reminder_time">Utiliser une heure par défaut pour les rappels du groupe</string>
     <string name="group_default_reminder_time">Heure par défaut des rappels</string>
     <string name="reminder_delete_confirmation">Voulez-vous supprimer le rappel ?</string>

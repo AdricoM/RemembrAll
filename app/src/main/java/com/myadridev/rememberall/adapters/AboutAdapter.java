@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +16,6 @@ import com.myadridev.rememberall.models.AboutItem;
 
 import java.util.List;
 
-/**
- * Created by adrien on 24/08/15.
- */
 public class AboutAdapter extends ArrayAdapter<AboutItem> {
     private LayoutInflater layoutInflater;
     private Context context;
@@ -31,8 +29,9 @@ public class AboutAdapter extends ArrayAdapter<AboutItem> {
         contactSubject = _contactSubject;
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         View view = layoutInflater.inflate(R.layout.about_item, null);
 
         AboutItem item = getItem(position);
@@ -51,7 +50,7 @@ public class AboutAdapter extends ArrayAdapter<AboutItem> {
                         public void onClick(View v) {
                             Intent intent = new Intent(Intent.ACTION_SENDTO);
                             intent.setData(Uri.parse(context.getString(R.string.about_mail_uri)));
-                            intent.putExtra(Intent.EXTRA_EMAIL, new String[] {context.getString(R.string.about_mail)});
+                            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{context.getString(R.string.about_mail)});
                             intent.putExtra(Intent.EXTRA_SUBJECT, contactSubject);
                             context.startActivity(Intent.createChooser(intent, context.getString(R.string.about_mail_client_choice_label)));
                         }

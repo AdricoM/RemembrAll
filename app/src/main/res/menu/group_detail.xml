@@ -1,41 +1,40 @@
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/menu_group_edit"
         android:icon="@android:drawable/ic_menu_edit"
-        app:showAsAction="ifRoom"
-        android:title="@string/menu_group_edit"/>
+        android:title="@string/menu_group_edit"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_group_delete"
         android:icon="@android:drawable/ic_menu_delete"
-        app:showAsAction="ifRoom"
-        android:title="@string/menu_group_delete"/>
+        android:title="@string/menu_group_delete"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_group_quick_access_off"
         android:icon="@android:drawable/btn_star_big_off"
-        app:showAsAction="ifRoom"
-        android:title="@string/menu_group_quick_access_off"/>
+        android:title="@string/menu_group_quick_access_off"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_group_quick_access_on"
         android:icon="@android:drawable/btn_star_big_on"
-        app:showAsAction="ifRoom"
-        android:title="@string/menu_group_quick_access_on"/>
+        android:title="@string/menu_group_quick_access_on"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_group_save"
         android:icon="@android:drawable/ic_menu_save"
-        app:showAsAction="ifRoom"
-        android:title="@string/menu_group_save"/>
+        android:title="@string/menu_group_save"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_group_cancel"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
-        app:showAsAction="ifRoom"
-        android:title="@string/menu_group_cancel"/>
+        android:title="@string/menu_group_cancel"
+        app:showAsAction="ifRoom" />
 
 </menu>

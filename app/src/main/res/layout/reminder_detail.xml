@@ -1,13 +1,11 @@
-<android.support.design.widget.CoordinatorLayout
-    android:id="@+id/reminder_coordinator_layout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reminder_coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.myadridev.rememberall.activities.ReminderDetailActivity">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -17,8 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:popupTheme="@android:style/ThemeOverlay.Material.Light"
-            android:theme="@style/ToolbarTheme">
-        </android.support.v7.widget.Toolbar>
+            android:theme="@style/ToolbarTheme" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -38,8 +35,8 @@
                     android:id="@+id/reminder_name_linear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
@@ -51,10 +48,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:text="@string/reminder_name"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/reminder_name_value"
@@ -63,7 +60,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="5"
                         android:text="Toto"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/reminder_name_value_edit"
@@ -72,7 +69,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="5"
                         android:text="Toto avec un super long titre pour faire plusieurs lignes"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -81,8 +78,8 @@
                     android:id="@+id/reminder_description_linear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
                     android:layout_below="@id/reminder_name_linear"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
@@ -94,10 +91,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_weight="0"
                         android:text="@string/reminder_description"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/reminder_description_value"
@@ -106,7 +103,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="5"
                         android:text="Toto"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/reminder_description_value_edit"
@@ -116,7 +113,7 @@
                         android:layout_weight="5"
                         android:hint="@string/global_optional"
                         android:text="Toto avec un super long titre pour faire plusieurs lignes"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -125,8 +122,8 @@
                     android:id="@+id/reminder_custom_date_linear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
                     android:layout_below="@id/reminder_description_linear"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
@@ -141,17 +138,17 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="3"
                         android:text="@string/reminder_date"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/reminder_date_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_weight="0"
                         android:text="Toto"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -164,15 +161,15 @@
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
                     android:calendarViewShown="false"
-                    android:datePickerMode="spinner"/>
+                    android:datePickerMode="spinner" />
 
                 <!-- use custom reminder time -->
                 <LinearLayout
                     android:id="@+id/reminder_use_custom_reminder_time_linear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
                     android:layout_below="@id/reminder_date_value_edit"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
@@ -187,15 +184,15 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         android:text="@string/reminder_use_custom_reminder_time"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <CheckBox
                         android:id="@+id/reminder_use_custom_reminder_time_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="0"/>
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="0" />
 
                 </LinearLayout>
 
@@ -204,8 +201,8 @@
                     android:id="@+id/reminder_custom_time_linear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
                     android:layout_below="@id/reminder_use_custom_reminder_time_linear"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
@@ -220,17 +217,17 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="3"
                         android:text="@string/reminder_time"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/reminder_custom_time_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_weight="0"
                         android:text="Toto"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -238,12 +235,12 @@
                     android:id="@+id/reminder_custom_time_value_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@id/reminder_date_value_edit"
-                    android:layout_alignRight="@id/reminder_date_value_edit"
+                    android:layout_alignEnd="@id/reminder_date_value_edit"
+                    android:layout_alignStart="@id/reminder_date_value_edit"
                     android:layout_below="@id/reminder_custom_time_linear"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"/>
+                    android:layout_marginTop="5dp" />
 
             </RelativeLayout>
 

@@ -11,9 +11,6 @@ import android.widget.TextView;
 
 import com.myadridev.rememberall.R;
 
-/**
- * Created by adrien on 02/04/16.
- */
 public class ErrorHelper {
 
     public static Snackbar getSnackbar(final Context context, CoordinatorLayout coordinatorLayout, String errorMessage) {
@@ -45,7 +42,7 @@ public class ErrorHelper {
         textView.setTextColor(ContextCompat.getColor(context, R.color.ErrorFront));
 
         if (viewToFocusBackOnDismiss != null) {
-            snackbar.setCallback(new Snackbar.Callback() {
+            snackbar.addCallback(new Snackbar.Callback() {
                 @Override
                 public void onDismissed(Snackbar snackbar, int event) {
                     viewToFocusBackOnDismiss.requestFocus();

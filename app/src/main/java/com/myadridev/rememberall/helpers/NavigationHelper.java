@@ -10,9 +10,6 @@ import com.myadridev.rememberall.activities.GroupsActivity;
 import com.myadridev.rememberall.activities.ReminderDetailActivity;
 import com.myadridev.rememberall.activities.SettingsActivity;
 
-/**
- * Created by adrien on 02/03/16.
- */
 public class NavigationHelper {
 
     public static void navigateToGroup(Context context, int groupId, boolean isEditable) {
